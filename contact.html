@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+  <!-- Homepage Setting -->
+  <title>お問い合わせ | KOHEI MATSUNOBU | エンジニアポートフォリオサイト</title>
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="canonical" href="https://koheimatsunobu-portfolio.com/index.html">
+  <meta name="description" content="エンジニアポートフォリオサイトです。
+  新卒でSESに就職し、SEやPGとして主に製造業の基幹系システム(生産管理/在庫管理/受発注など)の業務系アプリケーション開発に約4年間携わりました。
+  上流工程(設計)から下流工程(開発/テスト/運用)まで一貫した開発経験が私の強みです。
+  得意分野は、言語ではC及びVB.NET、VBAによる業務効率化、インフラ関連ではAWS及びCisco、Linux(CentOS)です。
+  本ポートフォリオサイトでは、現在のITスキルや経験内容をまとめています。">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@MatsunobuKohei">
+  <meta property="og:url" content="https://koheimatsunobu-portfolio.com">
+  <meta property="og:title" content="KOHEI MATSUNOBUのポートフォリオサイト">
+  <meta property="og:description" content="エンジニア転職用ポートフォリオサイトです。">
+  <meta property="og:image" content="https://koheimatsunobu-portfolio.com/img/card.png">
+
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+  <link href="css/reset.css" media="all" rel="stylesheet" type="text/css">
+  <link href="css/common.css" media="all" rel="stylesheet" type="text/css">
+  <link href="css/contact.css" media="all" rel="stylesheet" type="text/css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1P2PBYYYFN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1P2PBYYYFN');
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <!-- Navigation start -->
+    <div class="humburger-menu">
+      <label class="menu-btn">
+        <span class="btn-line"></span>
+      </label>
+    </div>
+    <div class="menu-content">
+      <ul>
+        <li><a href="https://koheimatsunobu-portfolio.com/index.html#profile" class="menu-list">PROFILE</a></li>
+        <li><a href="https://koheimatsunobu-portfolio.com/index.html#skill" class="menu-list">SKILL</a></li>
+        <li><a href="https://koheimatsunobu-portfolio.com/index.html#work" class="menu-list">WORK</a></li>
+        <li><a href="https://koheimatsunobu-portfolio.com/index.html#contact" class="menu-list">CONTACT</a></li>
+      </ul>
+    </div>
+    <nav id="gnav" class="fixed">
+      <ul>
+        <li><a href="https://koheimatsunobu-portfolio.com/index.html#profile">PROFILE</a></li>
+        <li><a href="https://koheimatsunobu-portfolio.com/index.html#skill">SKILL</a></li>
+        <li><a href="https://koheimatsunobu-portfolio.com/index.html#work">WORK</a></li>
+        <li><a href="https://koheimatsunobu-portfolio.com/index.html#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+    <!-- Navigation end -->
+
+    <!-- Main contetnts start -->
+    <main id="contents">
+      <!-- Contact start -->
+      <section class="section">
+        <div class="inner">
+          <div class="section-title-area">
+            <h2 class="section-title">CONTACT</h2>
+            <div class="section-intro">
+              ご興味を持っていただきまして、誠にありがとうございます。<br class="line">
+              ご不明点・ご質問がある方など、お気軽にお問い合わせください。
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="contact">
+        <div class="inner">
+          <div class="section-body">
+            <form id="myform" name="contact-form">
+              <dl class="dl-table">
+                <dt class="subject mandatory">件名</dt>
+                <dd>
+                  <input type="text" id="subject" name="subject" tabindex="1" placeholder="件名をご入力ください">
+                  <span id="subject_error" class="error_m"></span>
+                </dd>
+                <dt class="name any">氏名</dt>
+                <dd>
+                  <input type="text" id="name" name="name" tabindex="2" placeholder="(例)田中　太朗">
+                  <span id="name_error" class="error_m"></span>
+                </dd>
+                <dt class="email mandatory">メールアドレス</dt>
+                <dd>
+                  <input type="email" id="email" name="email" tabindex="3" placeholder="(例)example@email.com">
+                  <span id="email_error" class="error_m"></span>
+                </dd>
+                <dt class="tel any">電話番号</dt>
+                <dd>
+                  <input type="tel" name="tel" id="tel" tabindex="4" placeholder="(例)0000-000-0000">
+                  <span id="tel_error" class="error_m"></span>
+                </dd>
+                <dt class="body mandatory">お問い合わせ内容</dt>
+                <dd>
+                  <textarea name="body" id="body" cols="30" rows="10" tabindex="5" placeholder="お問い合わせ内容をご入力ください"></textarea>
+                  <span id="body_error" class="error_m"></span>
+                </dd>
+              </dl>
+              <p class="dummy"></p>
+              <div class="btn">
+                <a href="#" id="btn_submit">送信</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Contact end -->
+    </main>
+    <!-- Main contents end -->
+
+    <!-- Footer start -->
+    <footer id="footer">
+      <div class="inner">
+        <div class="copyright">
+          &copy;KOHEI MATSUNOBU. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+  </div>
+
+  <!-- Modal Window start-->
+  <div class="modal js-modal">
+    <div class="modal_bg js-modal-close"></div>
+    <div class="modal_content">
+      <p>お問い合わせ内容を送信してもよいですか？</p>
+      <div class="question">
+        <div class="btn-modal">
+          <a class="js-modal-close" href="#">いいえ</a>
+        </div>
+        <div class="btn-modal">
+          <a class="js-modal-send" href="#">はい</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Window end -->
+
+  <!-- Alert Box start -->
+  <div class="alert-box">
+    <p class="alert">
+      正常に送信されました。回答まで時間を要する場合があります。ご了承ください。
+    </p>
+  </div>
+  <!-- Alert Box end -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/b506997ffd.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

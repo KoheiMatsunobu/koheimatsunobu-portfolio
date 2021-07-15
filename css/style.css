@@ -1,0 +1,440 @@
+/* CSS Document */
+
+#profile .inner,
+#skill .inner,
+#work .inner {
+  max-width: 1000px;
+}
+
+/*--------------------------------
+ Card
+---------------------------------*/
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-image img {
+  width: 100%;
+}
+
+.card-caption {
+  text-align: center;
+}
+
+.card-caption-title {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.card-caption-info {
+  font-size: 10px;
+}
+
+.card-caption-url {
+  font-size: 10px;
+}
+
+.card img.fadein {
+  -webkit-transition: 1.5s;
+  -moz-transition: 1.5s;
+  -ms-transition: 1.5s;
+  -o-transition: 1.5s;
+  transition: 1.5s;
+  opacity: 0;
+}
+
+.card img.fadein.lazyloaded {
+  opacity: 1;
+}
+
+/*--------------------------------
+ Profile
+---------------------------------*/
+
+#profile .section-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#profile .section-image {
+  flex-basis: 20%;
+  margin: 0 auto;
+}
+
+#profile .section-image img {
+  /*margin: 0 auto;*/
+  border-radius: 50%;
+  /*box-shadow: 0 0 25px 0 #d9d9d9;*/
+}
+
+#profile .section-desc {
+  flex-basis: 62%;
+}
+
+/*--------------------------------
+ Skill
+---------------------------------*/
+#skill .section-skill {
+  font-size: 24px;
+}
+
+#skill .card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+#skill .card {
+  display: flex;
+  flex-basis: 46%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+#skill .skill-icon {
+  flex-basis: 60px;
+}
+
+#skill .skill-desc {
+  flex-basis: calc(100% - 60px - 30px);
+}
+
+#skill .skill-desc-title {
+  margin-bottom: 3px;
+}
+
+#skill .rate {
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 20px;
+  letter-spacing: .3em;
+}
+
+#skill .rate:before,
+#skill .rate:after {
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  height: 20px;
+  content: "★★★★★";
+}
+
+#skill .rate:before {
+  color: #ddd;
+}
+
+#skill .rate:after {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #515151;
+}
+
+#skill .rate1:after {
+  width: 20px;
+}
+
+#skill .rate2:after {
+  width: 40px;
+}
+
+#skill .rate3:after {
+  width: 60px;
+}
+
+#skill .rate4:after {
+  width: 80px;
+}
+
+#skill .rate5:after {
+  width: 100px;
+}
+
+/*--------------------------------
+ Work
+---------------------------------*/
+
+#work .work-table {
+  width: 800px;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#work .work-table th,td {
+  padding: 5px 15px;
+  border: solid 1px #333;
+}
+
+#work .work-table th {
+  width: 150px;
+  background-color: #555;
+  color: #fff;
+  vertical-align: middle;
+}
+
+/*--------------------------------
+ Contact
+---------------------------------*/
+
+#contact h2 {
+  padding-bottom: 20px;
+}
+
+#contact .contact-list {
+  padding-top: 5px;
+}
+
+#contact .contact-list ul {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 150px;
+  margin: 0 auto;
+}
+
+#contact .contact-list li {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+#contact .contact-list li a {
+  color: #333;
+}
+
+#contact .contact-list li img {
+  width: 50px;
+}
+
+#contact .contact-list-desc {
+  font-weight: bold;
+}
+
+#contact .contact-other {
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/*--------------------------------
+ Responsive
+---------------------------------*/
+/* iPad */
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  .sp {
+    display: block;
+  }
+
+  .hover-action-01 {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+
+  .hover-action-01:hover {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+
+  #wrapper {
+    padding-top: 82px;
+  }
+
+  #header {
+    height: 70vh;
+  }
+
+  #header .logo-title {
+    font-size: 28px;
+    letter-spacing: .16em;
+  }
+
+  #header .logo-desc {
+    font-size: 11px;
+  }
+
+  #gnav {
+    padding: 15px 0;
+  }
+
+  #gnav li {
+    font-size: 13px;
+    padding: 2px 15px;
+  }
+
+  #gnav li a {
+    padding: 0;
+  }
+
+  #gnav li a:hover {
+    opacity: 1;
+  }
+
+  #gnav li a::after {
+    display: none;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section .inner {
+    padding: 0 15px;
+  }
+
+  .section .section-title-area {
+    margin-bottom: 20px;
+  }
+
+  .section .section-title {
+    font-size: 22px;
+  }
+
+  .card-caption {
+    text-align: left;
+  }
+
+  .card-caption-title {
+    font-size: 10px;
+  }
+
+  #profile .section-image,
+  #profile .section-desc {
+    flex-basis: 100%;
+  }
+
+  #profile .section-image {
+    flex-basis: 100px;
+    margin: 0 auto 20px;
+  }
+
+  #skill .card-wrapper {
+    width: 100%;
+  }
+
+  #skill .card {
+    flex-basis: 100%;
+  }
+
+  #skill .skill-icon {
+    flex-basis: 45px;
+  }
+
+  #skill .skill-icon img {
+    width: 45px;
+  }
+
+  #skill .skill-desc {
+    flex-basis: calc(100% - 45px - 10px);
+  }
+
+  #skill .rate {
+    font-size: 15px;
+    height: 15px;
+  }
+
+  #skill .rate:before,
+  #skill .rate:after {
+    line-height: 15px;
+    height: 15px;
+  }
+
+  #skill .rate1:after {
+    width: 15px;
+  }
+
+  #skill .rate2:after {
+    width: 35px;
+  }
+
+  #skill .rate3:after {
+    width: 55px;
+  }
+
+  #skill .rate4:after {
+    width: 75px;
+  }
+
+  #skill .rate5:after {
+    width: 95px;
+  }
+
+  #contact .contact-list ul {
+    width: 100px;
+  }
+
+  #work .work-table {
+  width: 720px;
+  }
+
+  #contact .contact-list li img {
+    width: 30px;
+  }
+
+  #contact .contact-list-desc {
+    font-size: 12px;
+  }
+
+  #footer .inner {
+    padding: 20px 0;
+  }
+
+}
+
+/* iPhone6/7/8, iPhone6/7/8 Plus, iPhoneX */
+@media screen and (max-width: 420px) {
+  .btn {
+    margin-top: 15px;
+  }
+
+  #skill .section-intro {
+    text-align: left;
+  }
+
+  #skill .section-intro br {
+    display: none;
+  }
+
+  #work .work-table {
+    width: 320px;
+  }
+
+  #work .work-table th {
+    width: 96px;
+  }
+
+  #work .work-table tr {
+    font-size: 10px;
+  }
+
+}

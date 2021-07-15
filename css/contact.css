@@ -1,0 +1,364 @@
+/* CSS Document */
+
+/*--------------------------------
+ CONTACT
+---------------------------------*/
+
+#contact .section-body {
+  width: 800px;
+  margin: 0 auto;
+}
+
+#contact .dl-table {
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#contact .dl-table dt {
+  padding-top: 26px;
+  padding-right: 40px;
+  width: 30%;
+}
+
+#contact .dl-table dd {
+  width: 70%;
+}
+
+#contact .dl-table input,
+#contact .dl-table textarea {
+  border-radius: 3px;
+  border: 2px solid #ddd;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  resize: none;
+  background-color: #f7f7f7;
+}
+
+span.error_m {
+  font-weight: normal;
+  color: #ff4040;
+  display: block;
+  margin: 0;
+}
+
+#contact form {
+  width: 100%;
+}
+
+#contact form input[type="text"].inp_error,
+#contact form input[type="email"].inp_error,
+#contact form input[type="tel"].inp_error,
+#contact form textarea.inp_error {
+  border: 2px solid #f88a8a;
+  background-color: #f4d4d4;
+}
+
+.mandatory::after {
+  display: flex;
+  float: right;
+  content: "必須";
+  color: #ff4040;
+  border: 1px solid #f88a8a;
+  background-color: #f4d4d4;
+  padding: 0 4px;
+}
+
+.any::after {
+  display: flex;
+  float: right;
+  content: "任意";
+  color: #333;
+  border: 1px solid #555;
+  background-color: #ddd;
+  padding: 0 4px;
+}
+
+.dummy {
+  height: 30px;
+}
+
+/*--------------------------------
+ Modal Window
+---------------------------------*/
+
+.modal {
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 101;
+}
+
+.modal_bg {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+
+.modal_content {
+  background-color: #fff;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+}
+
+.question {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.btn-modal {
+  display: flex;
+  float: right;
+  margin-left: 20px;  
+  width: 70px;
+  height: 40px;
+  background-color: #555;
+}
+
+.btn-modal a {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+  color: #fff;
+}
+
+/*--------------------------------
+ Alert Box
+---------------------------------*/
+
+.alert-box {
+  display: none;
+  position: fixed;
+  top: 0; /* 上に配置 */
+  width: 100%;
+  height: 70px;
+  background-color: rgb(108, 226, 98);
+  text-align: center;
+  padding-top: 25px;
+  color: #fff;
+  z-index: 102;
+}
+
+.alert {
+  margin-bottom: 5px;
+}
+
+/*--------------------------------
+ Responsive
+---------------------------------*/
+/* iPad Pro */
+@media screen and (max-width: 1024px) {
+  #contact {
+    margin: 0 auto;
+  }
+
+  #contact .dl-table {
+    display: block;
+  }
+
+  #contact .dl-table dt {
+    width: 30%;
+  }
+
+  #contact .dl-table dd {
+    width: 100%;
+  }
+
+  footer {
+    margin-top: 79px;
+  }
+}
+
+/* iPad */
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  .sp {
+    display: block;
+  }
+
+  .hover-action-01 {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+
+  .hover-action-01:hover {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+
+  #wrapper {
+    padding-top: 0;
+  }
+
+  #header {
+    height: 70vh;
+  }
+
+  #header .logo-title {
+    font-size: 28px;
+    letter-spacing: .16em;
+  }
+
+  #header .logo-desc {
+    font-size: 11px;
+  }
+
+  #gnav {
+    padding: 15px 0;
+  }
+
+  #gnav li {
+    font-size: 13px;
+    padding: 2px 15px;
+  }
+
+  #gnav li a {
+    padding: 0;
+  }
+
+  #gnav li a:hover {
+    opacity: 1;
+  }
+
+  #gnav li a::after {
+    display: none;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section .inner {
+    padding: 0 15px;
+  }
+
+  .section .section-title-area {
+    margin-bottom: 20px;
+  }
+
+  .section .section-title {
+    font-size: 22px;
+  }
+
+  .card-caption {
+    text-align: left;
+  }
+
+  .card-caption-title {
+    font-size: 10px;
+  }
+
+  #profile .section-image,
+  #profile .section-desc {
+    flex-basis: 100%;
+  }
+
+  #profile .section-image {
+    flex-basis: 100px;
+    margin: 0 auto 20px;
+  }
+
+  #footer .inner {
+    padding: 20px 0;
+  }
+
+  .section {
+    padding: 70px 20px 20px 20px;
+  }
+
+  #contact .section-body {
+    width: 340px;
+  }
+
+  #contact.section {
+    padding: 0;
+  }
+
+  #contact .dl-table {
+    width: 100%;
+  }
+
+  #contact .dl-table dt {
+    width: 100%;
+  }
+
+  #contact .dl-table dd {
+    margin-top: 0;
+  }
+
+  #contact .dl-table input,
+  #contact .dl-table textarea {
+    margin-top: 10px;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .dummy {
+    height: 50px;
+  }
+
+  .modal_content {
+    left: 50%;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+  }
+
+  .question {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .btn-modal {
+    display: flex;
+    margin-left: 20px;  
+    width: 70px;
+    height: 40px;
+  }
+
+  .btn-modal a {
+    margin-top: 10px;
+  }
+}
+
+/* iPhone6/7/8, iPhone6/7/8 Plus, iPhoneX */
+@media screen and (max-width: 420px) {
+
+  .alert-box {
+    padding: 15px;
+    height: 70px;
+  }
+
+}
