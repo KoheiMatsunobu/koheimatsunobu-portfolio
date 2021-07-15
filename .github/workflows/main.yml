@@ -33,7 +33,7 @@ jobs:
           AWS-ACCESS-KEY-ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS-SECRET-ACCESS-KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           FROM_PATH: "koheimatsunobu-portfolio/"
-          DEST_PATH: "arn:aws:s3:::koheimatsunobu-portfolio.com"
+          DEST_PATH: "arn:aws:s3:::koheimatsunobu-portfolio.com/*"
 
       # CloudFrontのキャッシュクリア
       - name: "Invalidate CloudFront"
