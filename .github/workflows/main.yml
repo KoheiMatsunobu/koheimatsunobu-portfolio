@@ -37,7 +37,7 @@ jobs:
         env: 
           S3_UPLOAD_BUCKET: ${{ secrets.S3_UPLOAD_BUCKET }}
         run: |
-          aws s3 cp $LOCAL_DIRECTORY s3://$S3_UPLOAD_BUCKET --recursive 
+          aws s3 cp ~/Desktop/work/koheimatsunobu-portfolio s3://koheimatsunobu-portfolio.com --recursive 
 
       # CloudFrontのキャッシュクリア
       - name: "Invalidate CloudFront"
