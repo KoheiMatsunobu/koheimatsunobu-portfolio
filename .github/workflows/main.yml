@@ -25,15 +25,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: Configure AWS credentials from account
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
       # S3にアップロード
       - name: "Copy Files to S3"
-        uses: opspresso/action-s3-sync@main
-        env:
-          AWS_REGION: ${{ secrets.AWS_REGION }}
-          AWS-ACCESS-KEY-ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS-SECRET-ACCESS-KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          FROM_PATH: "koheimatsunobu-portfolio/"
-          DEST_PATH: "arn:aws:s3:::koheimatsunobu-portfolio.com/*"
+        run: aws s3 sync ./koheimatsunobu-portfolio arn:aws:s3:::koheimatsunobu-portfolio.com/* --delete
 
       # CloudFrontのキャッシュクリア
       - name: "Invalidate CloudFront"
