@@ -34,7 +34,10 @@ jobs:
 
       # S3にアップロード
       - name: "Copy Files to S3"
-        run: aws s3 sync ../../ http://koheimatsunobu-portfolio.com.s3-website-ap-northeast-1.amazonaws.com
+        env: 
+          S3_UPLOAD_BUCKET: ${{ secrets.S3_UPLOAD_BUCKET }}
+        run: |
+          aws s3 cp ./ s3://$S3_UPLOAD_BUCKET/ --quiet
 
       # CloudFrontのキャッシュクリア
       - name: "Invalidate CloudFront"
