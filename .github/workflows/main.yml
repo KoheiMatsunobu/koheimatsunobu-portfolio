@@ -33,12 +33,11 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       # S3にアップロード
-      - name: "Copy Files to S3"
+      - name: "S3 sync"
         env: 
           S3_UPLOAD_BUCKET: ${{ secrets.S3_UPLOAD_BUCKET }}
-        working-directory: "koheimatsunobu-portfolio"
         run: |
-          aws s3 cp . s3://$S3_UPLOAD_BUCKET/ --recursive --delete
+          aws s3 sync ./koheimatsunobu-portfolio/ s3://$S3_UPLOAD_BUCKET/ --recursive --delete
 
       # CloudFrontのキャッシュクリア
       - name: "Invalidate CloudFront"
