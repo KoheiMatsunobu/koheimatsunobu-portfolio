@@ -34,7 +34,7 @@ jobs:
 
       # S3にアップロード
       - name: "Copy Files to S3"
-        run: aws s3 sync ../../ arn:aws:s3:::koheimatsunobu-portfolio.com
+        run: aws s3 sync ../../ http://koheimatsunobu-portfolio.com.s3-website-ap-northeast-1.amazonaws.com
 
       # CloudFrontのキャッシュクリア
       - name: "Invalidate CloudFront"
