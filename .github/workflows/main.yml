@@ -35,11 +35,11 @@ jobs:
       # S3にアップロード
       - name: "S3 sync"
         run: |
-            aws s3 cp ../../index.html s3://koheimatsunobu-portfolio.com
-            aws s3 cp ../../contact.html s3://koheimatsunobu-portfolio.com
-            aws s3 cp ../../css s3://koheimatsunobu-portfolio.com --recursive
-            aws s3 cp ../../js s3://koheimatsunobu-portfolio.com --recursive
-            aws s3 cp ../../img s3://koheimatsunobu-portfolio.com --recursive
+            aws s3 cp ../../koheimatsunobu-portfolio/index.html s3://koheimatsunobu-portfolio.com
+            aws s3 cp ../../koheimatsunobu-portfolio/contact.html s3://koheimatsunobu-portfolio.com
+            aws s3 cp ../../koheimatsunobu-portfolio/css s3://koheimatsunobu-portfolio.com --recursive
+            aws s3 cp ../../koheimatsunobu-portfolio/js s3://koheimatsunobu-portfolio.com --recursive
+            aws s3 cp ../../koheimatsunobu-portfolio/img s3://koheimatsunobu-portfolio.com --recursive
 
       # CloudFrontのキャッシュクリア
       - name: "Invalidate CloudFront"
