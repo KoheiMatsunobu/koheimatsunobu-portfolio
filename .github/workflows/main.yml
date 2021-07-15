@@ -35,8 +35,7 @@ jobs:
       # S3にアップロード
       - name: "S3 sync"
         working-directory: koheimatsunobu-portfolio
-        run: |
-          aws s3 sync . s3://$S3_UPLOAD_BUCKET --delete
+        run: aws s3 sync . s3://koheimatsunobu-portfolio.com --delete
 
       # CloudFrontのキャッシュクリア
       - name: "Invalidate CloudFront"
