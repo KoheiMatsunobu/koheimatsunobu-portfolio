@@ -27,7 +27,7 @@ jobs:
 
       # S3にアップロード
       - name: "Copy Files to S3"
-        uses: opspresso/action-s3-sync@master
+        uses: opspresso/action-s3-sync@main
         env:
           AWS_REGION: ${{ secrets.AWS_REGION }}
           AWS-ACCESS-KEY-ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
