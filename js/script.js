@@ -230,7 +230,7 @@ $(function () {
       // reCAPTCHAv3認証
       $.ajax({
         type: 'POST',
-        url: 'https://koheimatsunobu-portfolio.com/libs/grecaptcha_execute.php',
+        url: '../libs/grecaptcha_execute.php',
         headers: {
           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
