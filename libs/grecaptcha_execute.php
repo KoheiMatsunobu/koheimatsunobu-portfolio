@@ -1,5 +1,5 @@
 <?php
-require './libs/recaptchavars.php';
+require './recaptchavars.php';
 
 $gscore = 0.8;
 
