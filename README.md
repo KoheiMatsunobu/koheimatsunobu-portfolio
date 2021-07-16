@@ -5,13 +5,13 @@
 [KOHEI MATSUNOBU　エンジニア用ポートフォリオサイト](https://koheimatsunobu-portfolio.com)
 
 ## 1. 機能概要  
-1. ポートフォリオサイトの「CONTACT」ページからお問い合わせがあった際にメール通知。
+1. ポートフォリオサイトの「CONTACT」ページからお問い合わせがあった際にメール通知。(Google reCAPTCHA実装済み)
 2. GitHub Actionsを使用したCI/CDを構築。リモートリポジトリにpushされた際にS3に自動デプロイし、CloudFrontのキャッシュクリア処理を行う。
 3. S3の静的WEBホスティング機能やLambda関数などを用いたサーバーレス化。
 
 ## 2. 使用言語/環境  
 - 言語
-    - HTML/CSS/JavaScript(JQuery)
+    - HTML/CSS/JavaScript(JQuery)/PHP
 - インフラ
     - AWS
         - Amazon Route53
