@@ -3,7 +3,7 @@ require './libs/recaptchavars.php';
 
 $gscore = 0.8;
 
-if (isset($_POST['recaptchaResponse']) && !empty($_POST['recaptchaResponce'])) {
+if (isset($_POST['recaptchaResponse']) && !empty($_POST['recaptchaResponse'])) {
     $secret = V3_SECRETKEY;
     $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['recaptchaResponse']);
 
