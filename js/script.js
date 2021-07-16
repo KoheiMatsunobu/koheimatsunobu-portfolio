@@ -226,22 +226,59 @@ $(function () {
 
       // Close Modal Window
       $('.js-modal').fadeOut();
-      // お問い合わせフォーム初期化
-      flg = true;
-      init_contact();
 
-      // Open Alert Box
-      $('.alert-box').slideDown(750).delay(2500).slideUp(750);
-
+      // reCAPTCHAv3認証
       $.ajax({
-        url: 'https://d0pqnmfba3.execute-api.ap-northeast-1.amazonaws.com/prod',
         type: 'POST',
-        data: JSON.stringify(data),
-        success: function(data){
-          console.log(data);
-        }
+        url: './libs/grecaptcha_execute.php',
+        timeout: 10000,
+        cache: false,
+        data: {
+          'recaptchaResponse' : tokenData
+        },
+        dataType: 'text'
+      })
+      .done(function(){
+        // 正常
+
+        $.ajax({
+          url: 'https://d0pqnmfba3.execute-api.ap-northeast-1.amazonaws.com/prod',
+          type: 'POST',
+          data: JSON.stringify(data),
+          success: function (data) {
+            console.log(data);
+          }
+        })
+        .done(function(){
+          // 正常
+          // お問い合わせフォーム初期化
+          flg = true;
+          init_contact();
+
+          // Open Alert Box
+          $('.alert-box').slideDown(750).delay(2500).slideUp(750);
+        })
+        .fail(function(){
+          // 異常
+        });
+      })
+      .fail(function(){
+        // 異常 
       });
     });
   });
 
+  /* Google reCAPTCHAv3 */
+  var tokenData; //生成済みトークンの退避用
+
+  $(function(){
+    // Google reCAPTCHAv3のサイトキーを使用してトークンを生成
+    grecaptcha.ready(function(){
+      grecaptcha.execute('6LfWBJ0bAAAAAIv6gMpbX9vodQ9acrFZfwJLsM4d', { action: 'submit'})
+      .then(function(token){
+        //トークン生成
+        tokenData = token;
+      });
+    });
+  });
 });
