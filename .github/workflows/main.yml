@@ -34,7 +34,7 @@ jobs:
 
       # S3にアップロード
       - name: "S3 sync"
-        run: aws s3 sync ./ s3://koheimatsunobu-portfolio.com --delete --exclude "README.md" --exclude ".github" --exclude ".git"
+        run: aws s3 sync ./ s3://koheimatsunobu-portfolio.com --exclude "README.md" --exclude ".github" --exclude ".git"
 
       # CloudFrontのキャッシュクリア
       - name: "Invalidate CloudFront"
