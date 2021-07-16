@@ -239,7 +239,7 @@ $(function () {
         data: {
           'recaptchaResponse' : tokenData
         },
-        dataType: 'text'
+        dataType: 'json'
       })
       .done(function(){
         // 正常
