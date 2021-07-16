@@ -230,7 +230,7 @@ $(function () {
       // reCAPTCHAv3認証
       $.ajax({
         type: 'POST',
-        url: './libs/grecaptcha_execute.php',
+        url: 'https://koheimatsunobu-portfolio.com/libs/grecaptcha_execute.php',
         timeout: 10000,
         cache: false,
         data: {
