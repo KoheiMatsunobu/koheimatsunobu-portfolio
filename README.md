@@ -4,12 +4,12 @@
 
 [KOHEI MATSUNOBU　エンジニア用ポートフォリオサイト](https://koheimatsunobu-portfolio.com)
 
-## < 1.機能概要 >  
+## 1. 機能概要  
 1. ポートフォリオサイトの「CONTACT」ページからお問い合わせがあった際にメール通知。
 2. GitHub Actionsを使用したCI/CDを構築。リモートリポジトリにpushされた際にS3に自動デプロイし、CloudFrontのキャッシュクリア処理を行う。
 3. S3の静的WEBホスティング機能やLambda関数などを用いたサーバーレス化。
 
-## < 2.使用言語/環境 >  
+## 2. 使用言語/環境  
 - 言語
     - HTML/CSS/JavaScript(JQuery)
 - インフラ
@@ -24,17 +24,16 @@
 - 独自ドメイン取得先
     - お名前.com
 
-## < 3.画面構成 >
-<img width="600" alt="web-pc" src="https://user-images.githubusercontent.com/58101150/125891577-9faa4b66-136c-4891-a154-6f3ee28c4158.png">
-
-1. セクションは、PROFILE/SKILL/WORK/CONTACT。  
+## 3. 画面構成
+<img width="698" alt="003" src="https://user-images.githubusercontent.com/58101150/125933441-b13ea567-c58e-4fb2-9dce-1355f97167b9.png">
+ 
+1. PORTFOLIOセクションの各カードを押下することで、該当ポートフォリオの詳細画面に画面遷移。
 2. CONTACTセクションの「お問い合わせ」ボタンを押下することで、お問い合わせページに画面遷移。
 3. お問い合わせページで「送信」ボタンを押下することで、お問い合わせ内容をメール通知。  
 
-## < 4.インフラ構成 >
+## 4. インフラ構成 
 ![koheimatsunobu-portfolio](https://user-images.githubusercontent.com/58101150/125888203-507679f7-57ca-4545-a58e-ef32887305a6.png)
-  
-### インフラ構成の概要  
+   
 (1)独自ドメインを使用しているため、Route53と連携。  
 (2)HTTPS化するため、ACMでSSL/TLS証明書を発行しRoute53と連携。  
 (3)Webサイトにアクセスする際にRoute53からCloudFrontに最新のキャッシュを返すための連携。  
