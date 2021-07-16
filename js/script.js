@@ -231,6 +231,9 @@ $(function () {
       $.ajax({
         type: 'POST',
         url: 'https://koheimatsunobu-portfolio.com/libs/grecaptcha_execute.php',
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
         timeout: 10000,
         cache: false,
         data: {
