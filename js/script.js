@@ -109,7 +109,7 @@ $(function () {
     $('#tel_error').val('');
     $('#body_error').val('');
 
-    // お問い合わせ送信後の場合
+    // お問い合わせが正常の場合
     if (flg == true) {
       flg = false;
 
@@ -235,17 +235,14 @@ $(function () {
       $.ajax({
         url: 'https://neqn9ywn49.execute-api.ap-northeast-1.amazonaws.com/dev',
         type: 'POST',
-        data: JSON.stringify(token),
+        data: JSON.stringify(token)
       })
       .done(function(){
         // 正常
         $.ajax({
           url: 'https://d0pqnmfba3.execute-api.ap-northeast-1.amazonaws.com/prod',
           type: 'POST',
-          data: JSON.stringify(data),
-          success: function (data) {
-            console.log(data);
-          }
+          data: JSON.stringify(data)
         })
         .done(function(){
           // 正常
@@ -254,18 +251,49 @@ $(function () {
           init_contact();
 
           // Open Alert Box
-          $('.alert-box').slideDown(750).delay(2500).slideUp(750);
+          open_alert(flg, 1);
         })
         .fail(function(){
           // 異常
+          open_alert(flg, 2);
         });
       })
       .fail(function(){
         // 異常 
-        alert('テスト');
+        open_alert(flg, 3);
       });
     });
   });
+
+  // Open Alert Box
+  function open_alert($status, $bodycode) {
+
+    if ($status) {
+      //正常
+      $('.alert-box').css(
+        'background-color', 'rgb(108,226,98)'
+      );
+      $('.alert').text(
+        '正常に送信されました。回答まで時間を要する場合があります。ご了承ください。'
+      );
+    } else {
+      //異常
+      $('.alert-box').css(
+        'background-color', 'rgb(231,103,86)'
+      );
+
+      if ($bodycode == 2) {
+        $('.alert').text(
+          'お問い合わせ内容の送信に失敗しました。再度お問い合わせ内容を送信してください。'
+        );
+      } else if ($bodycode == 3) {
+        $('.alert').text(
+          'reCAPTCHAによる認証に失敗したか、不正なbotによる送信の可能性があります。時間間隔を空けて再度お問い合わせ内容を送信してください。'
+        );
+      }
+    }
+    $('.alert-box').slideDown(750).delay(2500).slideUp(750);
+  }
 
   /* Google reCAPTCHAv3 */
   var tokenData; //生成済みトークンの退避用
