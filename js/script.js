@@ -251,24 +251,24 @@ $(function () {
           init_contact();
 
           // Open Alert Box
-          open_alert(flg, 1);
+          open_alert(true, 1);
         })
         .fail(function(){
           // 異常
-          open_alert(flg, 2);
+          open_alert(false, 2);
         });
       })
       .fail(function(){
         // 異常 
-        open_alert(flg, 3);
+        open_alert(false, 3);
       });
     });
   });
 
   // Open Alert Box
-  function open_alert($status, $bodycode) {
+  function open_alert(status, bodycode) {
 
-    if ($status) {
+    if (status) {
       //正常
       $('.alert-box').css(
         'background-color', 'rgb(108,226,98)'
@@ -282,11 +282,11 @@ $(function () {
         'background-color', 'rgb(231,103,86)'
       );
 
-      if ($bodycode == 2) {
+      if (bodycode == 2) {
         $('.alert').text(
           'お問い合わせ内容の送信に失敗しました。再度お問い合わせ内容を送信してください。'
         );
-      } else if ($bodycode == 3) {
+      } else if (bodycode == 3) {
         $('.alert').text(
           'reCAPTCHAによる認証に失敗したか、不正なbotによる送信の可能性があります。時間間隔を空けて再度お問い合わせ内容を送信してください。'
         );
