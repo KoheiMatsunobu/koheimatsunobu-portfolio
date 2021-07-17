@@ -224,26 +224,21 @@ $(function () {
         'body': body
       }
 
+      var token = {
+        'token': tokenData
+      }
+
       // Close Modal Window
       $('.js-modal').fadeOut();
 
       // reCAPTCHAv3認証
       $.ajax({
+        url: 'https://neqn9ywn49.execute-api.ap-northeast-1.amazonaws.com/dev',
         type: 'POST',
-        url: '../libs/grecaptcha_execute.php',
-        headers: {
-          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        },
-        timeout: 10000,
-        cache: false,
-        data: {
-          'recaptchaResponse' : tokenData
-        },
-        dataType: 'text'
+        data: JSON.stringify(token),
       })
       .done(function(){
         // 正常
-
         $.ajax({
           url: 'https://d0pqnmfba3.execute-api.ap-northeast-1.amazonaws.com/prod',
           type: 'POST',
@@ -267,6 +262,7 @@ $(function () {
       })
       .fail(function(){
         // 異常 
+        alert('テスト');
       });
     });
   });
