@@ -77,6 +77,14 @@
 }
 
 /*--------------------------------
+ Certification
+---------------------------------*/
+#certification .section-body {
+  width: 55%;
+  margin: 0 auto 40px auto;
+}
+
+/*--------------------------------
  Skill
 ---------------------------------*/
 #skill .section-skill {
@@ -307,6 +315,10 @@
     margin-left: 5px;
   }
 
+  #certification .section-body {
+    width: 70%;
+  }
+
 }
 
 /* iPad */
@@ -491,6 +503,10 @@
     padding: 0 120px;
   }
 
+  #certification .section-body {
+    width: 80%;
+  }
+
   #work .work-table {
     width: 720px;
   }
@@ -557,6 +573,12 @@
 
   #work .work-table tr {
     font-size: 10px;
+  }
+
+  #certification .section-body {
+    width: 100%;
+    margin: 0;
+    font-size: 9px;
   }
 
 }

@@ -120,6 +120,44 @@ dd {
   display: block;
 }
 
+.description {
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.description p {
+    margin-bottom: 40px;
+}
+
+.description ol li {
+    list-style: decimal;
+}
+
+.description .list1::before,
+.description .list2::before,
+.description .list3::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    margin: 0 6px;
+    background-color: #333;
+}
+
+.description .list1::before {
+    margin: 0 6px; 
+}
+
+.description .list2::before {
+    margin: 0 6px 0 24px;
+}
+
+.description .list3::before {
+    margin: 0 6px 0 48px;
+}
+
 /*--------------------------------
 Header
 ---------------------------------*/
