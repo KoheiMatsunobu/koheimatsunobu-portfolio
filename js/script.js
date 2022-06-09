@@ -292,7 +292,7 @@ $(function () {
         );
       }
     }
-    $('.alert-box').slideDown(750).delay(2500).slideUp(750);
+    $('.alert-box').slideDown(750).delay(3500).slideUp(750);
   }
 
   /* Google reCAPTCHAv3 */
