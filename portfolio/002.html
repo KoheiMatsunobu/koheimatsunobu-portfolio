@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+  <!-- Homepage Setting -->
+  <title>ポートフォリオ一覧 | KOHEI MATSUNOBU | エンジニアポートフォリオサイト</title>
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <meta name="description" content="エンジニアポートフォリオサイトです。
+  新卒でSESに就職し、SEやPGとして主に製造業の基幹系システム(生産管理/在庫管理/受発注など)の業務系アプリケーション開発に約4年間携わりました。
+  上流工程(設計)から下流工程(開発/テスト/運用)まで一貫した開発経験が私の強みです。
+  得意分野は、言語ではC及びVB.NET、VBAによる業務効率化、インフラ関連ではAWS及びCisco、Linux(CentOS)です。
+  本ポートフォリオサイトでは、現在のITスキルや経験内容をまとめています。">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@MatsunobuKohei">
+  <meta property="og:url" content="https://koheimatsunobu-portfolio.com">
+  <meta property="og:title" content="KOHEI MATSUNOBUのポートフォリオサイト">
+  <meta property="og:description" content="エンジニア転職用ポートフォリオサイトです。">
+  <meta property="og:image" content="https://koheimatsunobu-portfolio.com/img/card.png">
+
+  <!-- CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+  <link href="../css/reset.css" media="all" rel="stylesheet" type="text/css">
+  <link href="../css/common.css" media="all" rel="stylesheet" type="text/css">
+  <link href="../css/portfolio.css" media="all" rel="stylesheet" type="text/css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1P2PBYYYFN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1P2PBYYYFN');
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <!-- Navigation start -->
+    <div class="humburger-menu">
+      <label class="menu-btn">
+        <span class="btn-line"></span>
+      </label>
+    </div>
+    <div class="menu-content">
+      <ul>
+        <li><a href="https://koheimatsunobu-portfolio.com#profile" class="menu-list">PROFILE</a></li>
+        <li><a href="https://koheimatsunobu-portfolio.com#skill" class="menu-list">SKILL</a></li>
+        <li><a href="https://koheimatsunobu-portfolio.com#certification" class="menu-list">CERTIFICATION</a></li>
+        <li><a href="https://koheimatsunobu-portfolio.com#portfolio" class="menu-list">PORTFOLIO</a></li>
+        <li><a href="https://koheimatsunobu-portfolio.com#work" class="menu-list">WORK</a></li>
+        <li><a href="https://koheimatsunobu-portfolio.com#contact" class="menu-list">CONTACT</a></li>
+      </ul>
+    </div>
+    <nav id="gnav" class="fixed">
+      <ul>
+        <li><a href="https://koheimatsunobu-portfolio.com#profile">PROFILE</a></li>
+        <li><a href="https://koheimatsunobu-portfolio.com#skill">SKILL</a></li>
+        <li><a href="https://koheimatsunobu-portfolio.com#certification" class="menu-list">CERTIFICATION</a></li>
+        <li><a href="https://koheimatsunobu-portfolio.com#portfolio">PORTFOLIO</a></li>
+        <li><a href="https://koheimatsunobu-portfolio.com#work">WORK</a></li>
+        <li><a href="https://koheimatsunobu-portfolio.com#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+    <!-- Navigation end -->
+
+    <!-- Main contetnts start -->
+    <main id="contents">
+
+      <!-- Description start-->
+      <section class="section sub" id="description1">
+        <div class="inner">
+          <h2 class="section-title">
+            reCAPTCHA For Lambda Cunstom Runtime(PHP7.4)
+          </h2>
+          <div class="dummy"></div>
+          <div class="section-intro">
+            <img src="../img/portfolio/001/001.png" alt="ポートフォリオのスクリーンショット">
+            <div class="description">
+              <p>
+                エンジニア用ポートフォリオサイトのお問い合わせでGoogle reCAPTCHAv3を実装するためのLambdaカスタムランタイム構成を開発。
+              </p>
+            </div>
+            <div class="btn">
+              <a href="https://github.com/KoheiMatsunobu/reCAPTCHAv3ForLambda">
+                詳細
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Description end -->
+
+      <!-- Description Start -->
+      <section class="section sub" id="description2">
+        <div class="inner">
+          <div class="section-title">
+            機能概要
+          </div>
+          <div class="section-intro">
+            <div class="description">
+              <ol>
+                <li>
+                  ajaxからAPIGatewayを使用してLambdaをコールし、Google reCAPTCHAv3認証を行う。
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Description end -->
+
+      <!-- Description Start -->
+      <section class="section sub" id="description3">
+        <div class="inner">
+          <div class="section-title">
+            課題点
+          </div>
+          <div class="section-intro">
+            <div class="description">
+              <ol>
+                <li>
+                  S3静的Webホスティングでは、POSTメソッドをサポートしておらず、S3バケット上に保存されている認証機能を実装したファイルに対して、ajaxから自ドメインに対してPOSTリクエストが許可されず403エラーとなってしまう。
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Description end -->
+
+      <!-- Description Start -->
+      <section class="section sub" id="description4">
+        <div class="inner">
+          <div class="section-title">
+            解決方法
+          </div>
+          <div class="section-intro">
+            <div class="description">
+              <ol>
+                <li>
+                  ajaxで外部API(APIGateway)に対してPOSTリクエストし、Lambda関数(Custom Runtime)上でGoogke reCAPTCHAv3認証を行うことで解決できる。
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Description end -->
+
+      <!-- Description start -->
+      <section class="section sub" id="description5">
+        <div class="inner">
+          <div class="section-title">
+            使用言語・環境
+          </div>
+          <div class="section-intro">
+            <div class="description">
+              <ul>
+                <li class="list1">
+                  言語
+                  <ul>
+                      <li class="list2">PHP7.4</li>
+                  </ul>
+                </li>
+                <li class="list1">
+                  インフラ
+                  <ul>
+                    <li class="list2">
+                      AWS
+                      <ul>
+                        <li class="list3">Amazon API Gateway</li>
+                        <li class="list3">AWS Lambda(Node.js 14.x)</li>
+                        <li class="list3">AWS ECR</li>
+                      </ul>
+                    </li>
+                    <li class="list2">
+                      Docker
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Description end -->
+
+      <!-- Description Start -->
+      <section class="section sub" id="description6">
+        <div class="inner">
+          <div class="section-title">
+            インフラ構成
+          </div>
+          <div class="section-intro">
+            <img src="../img/portfolio/002/001.png" alt="インフラ構成図">
+            <div class="description">
+              <ol>
+                <li>
+                  ローカルでDockerを使用して、Lambda Custom Runtime(PHP7.4)ベースのコンテナイメージを作成しビルド。
+                </li>
+                <li>
+                  ビルドしたイメージを、事前に作成したECRプライベートリポジトリにpush。
+                </li>
+                <li>
+                  LambdaとECRにpushしたリポジトリを連携。
+                </li>
+                <li>
+                  jsファイル上のajaxでAPIGatewayをPOSTリクエストする。その際にパラメータにGoogle reCAPTCHAv3認証でサイトキーから生成したトークンを渡す。
+                </li>
+                <li>
+                  APIGatewayでPOSTリクエスト時にLambda関数がコールされるように設定。
+                </li>
+                <li>
+                  Lambda関数上で、受け取ったトークンとシークレットキーを使用してreCAPTCHAv3認証を行う。認証成功の場合、戻り値をjsファイルに返す。
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Description end -->
+
+    </main>
+    <!-- Main contents end -->
+
+    <!-- Footer start -->
+    <footer id="footer">
+      <div class="inner">
+        <div class="copyright">
+          &copy;KOHEI MATSUNOBU. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+  </div>
+
+  <p id="pagetop">
+    <a href="#"></a>
+  </p>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/b506997ffd.js" crossorigin="anonymous"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
