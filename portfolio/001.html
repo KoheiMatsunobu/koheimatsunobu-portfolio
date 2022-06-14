@@ -190,13 +190,13 @@
                   独自ドメインを使用しているため、Route53と連携。
                 </li>
                 <li>
-                  HTTPS化するため、ACMでSSL/TLS証明書を発行しRoute53と連携。
+                  WebサイトをSSL/TLS実装するため、ACMでSSL証明書を発行しRoute53と連携。
                 </li>
                 <li>
                   Webサイトにアクセスする際にRoute53からCloudFrontに最新のキャッシュを返すための連携。
                 </li>
                 <li>
-                  エッジサーバー(CloudFront)にWEBサイト情報(S3を静的WEBホスティング)をキャッシュするよう設定。
+                  エッジサーバー(CloudFront)にWebサイト情報(S3を静的Webホスティング)をキャッシュするよう設定。
                 </li>
                 <li>
                   ポートフォリオサイトの「CONTACT」ページからお問い合わせがあった際、API GatewayをS3バケットに保存してあるjsファイルのajaxからコールする。
