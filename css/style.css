@@ -2,6 +2,7 @@
 
 #profile .inner,
 #skill .inner,
+#certification .inner,
 #portfolio .inner,
 #work .inner {
   max-width: 1000px;
@@ -79,9 +80,89 @@
 /*--------------------------------
  Certification
 ---------------------------------*/
-#certification .section-body {
-  width: 55%;
-  margin: 0 auto 40px auto;
+#certification .section-skill {
+  font-size: 24px;
+}
+
+#certification .card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+#certification .card {
+  display: flex;
+  flex-basis: 46%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+#certification .skill-icon {
+  flex-basis: 80px;
+}
+
+#certification .skill-desc {
+  flex-basis: calc(100% - 80px - 30px);
+}
+
+#certification .skill-desc-title {
+  margin-bottom: 3px;
+}
+
+#certification .skill-desc-title a {
+  color: #333;
+}
+
+#certification .rate {
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 20px;
+  letter-spacing: .3em;
+}
+
+#certification .rate:before,
+#certification .rate:after {
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  height: 20px;
+  content: "★★★★★";
+}
+
+#certification .rate:before {
+  color: #ddd;
+}
+
+#certification .rate:after {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #515151;
+}
+
+#certification .rate1:after {
+  width: 20px;
+}
+
+#certification .rate2:after {
+  width: 40px;
+}
+
+#certification .rate3:after {
+  width: 60px;
+}
+
+#certification .rate4:after {
+  width: 80px;
+}
+
+#certification .rate5:after {
+  width: 100px;
 }
 
 /*--------------------------------
@@ -315,10 +396,6 @@
     margin-left: 5px;
   }
 
-  #certification .section-body {
-    width: 70%;
-  }
-
 }
 
 /* iPad */
@@ -419,6 +496,7 @@
     font-size: 10px;
   }
 
+  /* Profile */
   #profile .section-image,
   #profile .section-desc {
     flex-basis: 100%;
@@ -429,6 +507,7 @@
     margin: 0 auto 20px;
   }
 
+  /* Skill */
   #skill .card-wrapper {
     width: 100%;
   }
@@ -480,6 +559,7 @@
     width: 95px;
   }
 
+  /* Portfolio */
   #portfolio .card-wrapper {
     width: 100%;
   }
@@ -503,14 +583,64 @@
     padding: 0 120px;
   }
 
-  #certification .section-body {
-    width: 80%;
+  /* Certification */
+  #certification .card-wrapper {
+    width: 100%;
   }
 
+  #certification .card {
+    flex-basis: 100%;
+  }
+
+  #certification .skill-icon {
+    flex-basis: 45px;
+  }
+
+  #certification .skill-icon img {
+    width: 45px;
+  }
+
+  #certification .skill-desc {
+    flex-basis: calc(100% - 45px - 10px);
+  }
+
+  #certification .rate {
+    font-size: 15px;
+    height: 15px;
+  }
+
+  #certification .rate:before,
+  #certification .rate:after {
+    line-height: 15px;
+    height: 15px;
+  }
+
+  #certification .rate1:after {
+    width: 15px;
+  }
+
+  #certification .rate2:after {
+    width: 35px;
+  }
+
+  #certification .rate3:after {
+    width: 55px;
+  }
+
+  #certification .rate4:after {
+    width: 75px;
+  }
+
+  #certification .rate5:after {
+    width: 95px;
+  }
+
+  /* Work */
   #work .work-table {
     width: 720px;
   }
 
+  /* Contact */
   #contact .contact-list ul {
     width: 100px;
   }
@@ -523,6 +653,7 @@
     font-size: 12px;
   }
 
+  /* Footer */
   #footer .inner {
     padding: 20px 0;
   }
@@ -535,6 +666,7 @@
     margin-top: 15px;
   }
 
+  /* Skill */
   #skill .section-intro {
     text-align: left;
   }
@@ -543,6 +675,7 @@
     display: none;
   }
 
+  /* Portfolio */
   #portfolio .section-intro {
     text-align: left;
   }
@@ -563,6 +696,7 @@
     font-size: 10px;
   }
 
+  /* Work */
   #work .work-table {
     width: 320px;
   }
@@ -575,10 +709,13 @@
     font-size: 10px;
   }
 
-  #certification .section-body {
-    width: 100%;
-    margin: 0;
-    font-size: 9px;
+  /* Certification */
+  #certification .section-intro {
+    text-align: left;
+  }
+
+  #certification .section-intro br {
+    display: none;
   }
 
 }
