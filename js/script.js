@@ -308,4 +308,64 @@ $(function () {
       });
     });
   });
+  
+  // レーダーチャート設定
+  var ctx = document.getElementById("myChart");
+  var myChart = new Chart(ctx, {
+    //グラフの種類
+    type: 'radar',
+    //データの設定
+    data: {
+      //データ項目のラベル
+      labels: ["Frontend", "Backend", "FW", "DB", "Cloud", "Infra", "Network", "OS"],
+      //データセット
+      datasets: [{
+        //背景色
+        backgroundColor: "rgba(68,68,68,0.5)",
+        //枠線の色
+        borderColor: "rgba(68,68,68,1)",
+        //結合点の背景色
+        pointBackgroundColor: "rgba(68,68,68,1)",
+        //結合点の枠線の色
+        pointBorderColor: "#fff",
+        //結合点の背景色（ホバ時）
+        pointHoverBackgroundColor: "#fff",
+        //結合点の枠線の色（ホバー時）
+        pointHoverBorderColor: "rgba(68,68,68,1)",
+        //結合点より外でマウスホバーを認識する範囲（ピクセル単位）
+        hitRadius: 5,
+        //グラフのデータ
+        data: [4, 5, 3, 3, 5, 3, 3, 4]
+      }]
+    },
+    //オプションの設定
+    options: {
+      // レスポンシブ指定
+      responsive: true,
+      maintainAspectRatio: false,
+      scale: {
+        ticks: {
+          // 最小値の値を0指定
+          beginAtZero: true,
+          min: 0,
+          stepSize: 1,
+          // 最大値を指定
+          max: 5,
+        },
+        pointLabels: {
+          fontSize: 10
+        }
+      },
+      //ラベル非表示
+      legend: {
+        display: false,
+        fontSize: 10,
+        labels: {
+          // このフォント設定はグローバルプロパティを上書きします。
+          fontSize: 14,
+        }
+      }
+    }
+  });
+
 });
