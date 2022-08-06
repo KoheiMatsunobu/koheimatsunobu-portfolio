@@ -6,6 +6,7 @@
 #portfolio .inner,
 #work .inner {
   max-width: 1000px;
+  z-index: 1;
 }
 
 /*--------------------------------
