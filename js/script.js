@@ -368,4 +368,28 @@ $(function () {
     }
   });
 
+  // Accordion Event
+  // アコーディオンをクリックした際の動作
+  $('.accordion-title').on('click', function(){
+    let findElm = $(this).next('.box'); // 直後のアコーディオンを行うエリアを取得
+    $(findElm).slideToggle();           // アコーディオンの上下動作
+
+    if($(this).hasClass('close')){      // タイトル要素にクラス名closeがある場合
+      $(this).removeClass('close');     // クラス名を除外
+    } else {
+      $(this).addClass('close');        // クラス名を付与
+    }
+  });
+
+  // ページ読み込みの際にopenクラスを付与し、openが付いていたら開く動作
+  $(window).on('load', function(){
+    //$('.accordion-area li:first-of-type section').addClass('open');   // accordino-areaの先頭liのsectionにopenクラス付与
+    $('.open').each(function(index, element){
+      let title = $(element).children('.accordion-title');  // openクラスの子要素のaccordion-titleクラスを取得
+      $(title).add('close');                                // タイトルクラスにcloseを付与
+
+      let box = $(element).children('.box');                // openクラスの子要素boxクラスを取得
+      $(box).slideDown(500);                                // アコーディオンを開く
+    });
+  });
 });

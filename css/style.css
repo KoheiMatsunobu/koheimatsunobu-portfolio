@@ -53,6 +53,68 @@
 }
 
 /*--------------------------------
+ Accordion
+---------------------------------*/
+/* Accordion全体 */
+.accordion-area {
+  list-style: none;
+  width: 96%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.accordion-area li {
+  margin: 10px 0;
+}
+
+.accordion-area section {
+  border: 1px solid #444;
+}
+
+/* Accordion Title */
+.accordion-title {
+  position: relative; /* +マークの位置基準とするためrelative指定 */
+  cursor: pointer;
+  font-weight: normal;
+  padding: 3% 3% 3% 50px;
+  transition: all .5s ease;
+}
+
+/* アイコンの＋と× */
+.accordion-title::before,
+.accordion-title::after {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 2px;
+  background-color: #444;
+}
+.accordion-title::before {
+  top: 48%;
+  left: 15px;
+  transform: rotate(0deg);
+}
+.accordion-title::after {
+  top: 48%;
+  left: 15px;
+  transform: rotate(90deg);
+}
+
+/*　 closeというクラスがついたら形状変化　 */
+.accordion-title.close::before {
+  transform: rotate(45deg);
+}
+.accordion-title.close::after {
+  transform: rotate(-45deg);
+}
+
+/* アコーディオンで表示するエリア */
+.accordion-area .box {
+  display: none;    /* 初期表示は非表示 */
+  margin: 0 3% 3% 3%;
+}
+
+/*--------------------------------
  Profile
 ---------------------------------*/
 
@@ -331,9 +393,10 @@
 
 #work .work-table th {
   width: 150px;
-  background-color: #555;
+  background-color: #888;
   color: #fff;
   vertical-align: middle;
+  text-align: center;
 }
 
 /*--------------------------------
