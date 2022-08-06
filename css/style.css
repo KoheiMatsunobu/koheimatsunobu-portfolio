@@ -183,6 +183,35 @@ body.appear #wrapper {
   }
 }
 
+/*========= タイピング ===============*/
+.TextTyping span {
+  display: none;
+}
+.TextTyping2 span {
+  display: none;
+}
+
+/*文字列後ろの線の設定*/
+.TextTyping::after {
+  /*content: "|";*/
+  content: attr(data-bar);
+  animation: typinganime .9s ease infinite;
+}
+.TextTyping2::after {
+  /*content: "|";*/
+  content: attr(data-bar);
+  animation: typinganime .9s ease infinite;
+}
+
+@keyframes typinganime {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
 /*--------------------------------
  Card
 ---------------------------------*/
