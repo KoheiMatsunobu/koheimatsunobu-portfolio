@@ -183,10 +183,10 @@ $(function () {
       $('#body_error').html('お問い合わせ内容は必須です。');
       $('#body').addClass('inp_error');
       result = false;
-    } else if (body.match(/[<(.*)>.*<\/\1>]/)) {
-      $('#body_error').html('HTML、URLの貼り付けは禁止しています。');
-      $('#body').addClass('inp_error');
-      result = false;
+    //} else if (body.match(/[<(.*)>.*<\/\1>]/)) {
+    //  $('#body_error').html('HTML、URLの貼り付けは禁止しています。');
+    //  $('#body').addClass('inp_error');
+    //  result = false;
     } else if (body.match(/^[ 　\r\n\t]*$/)) {
       $('#body_error').html('お問い合わせ内容は必須です。');
       $('#body').addClass('inp_error');
